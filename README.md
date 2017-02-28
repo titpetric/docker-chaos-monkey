@@ -4,8 +4,7 @@ A Chaos Monkey system for Docker Swarm
 
 ## Creating a disposable service
 
-Creating a disposable service is as simple as adding a label `role=disposable`; In case you would
-like to override this, you can set the `DOCKER_LABEL` environment variable to `name=value`.
+Creating a disposable service is as simple as adding a label `role=disposable`.
 
 For example:
 
@@ -27,3 +26,7 @@ If the service has only 1 replica (1/1), a container will not be killed.
 If the service has incomplete replicas (4/5), a container will not be killed.
 
 If no containers are running on the current host, no containers will be killed.
+
+## Screenshot
+
+![Screenshot](images/chaos-monkey.png)
