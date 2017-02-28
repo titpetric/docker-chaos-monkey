@@ -1,6 +1,8 @@
 # docker-chaos-monkey
 
-A Chaos Monkey system for Docker Swarm
+A Chaos Monkey system for Docker Swarm.
+
+Implemented for the book [12 Factor Applications with Docker and Go](https://leanpub.com/12fa-docker-golang).
 
 ## Creating a disposable service
 
@@ -21,11 +23,10 @@ When running `chaos.sh` you can set two environment variables:
 
 ## Rules
 
-If the service has only 1 replica (1/1), a container will not be killed.
-
-If the service has incomplete replicas (4/5), a container will not be killed.
-
-If no containers are running on the current host, no containers will be killed.
+* If the service has only 1 replica (1/1), a container will not be killed.
+* If the service has incomplete replicas (4/5), a container will not be killed.
+* If no containers are running on the current host, no containers will be killed.
+* Only one container per service is killed if the above conditions are met.
 
 ## Screenshot
 
