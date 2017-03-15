@@ -2,6 +2,8 @@
 
 A Chaos Monkey system for Docker Swarm.
 
+![Original ChaosMonkey Logo](images/cm-logo.png)
+
 Implemented for the book [12 Factor Applications with Docker and Go](https://leanpub.com/12fa-docker-golang).
 
 ## Creating a disposable service
