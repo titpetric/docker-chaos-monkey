@@ -16,7 +16,7 @@ color_white="\e[97m"
 color_green="\e[92m"
 color_reset="\e[0m"
 
-SERVICES=$(docker service ls --filter=label=${DOCKER_LABEL} | tail -n +2)
+SERVICES=$(docker service ls --filter "label=${DOCKER_LABEL}" | tail -n +2)
 
 if [ -z "${SERVICES}" ]; then
 	echo "No services with label: ${DOCKER_LABEL} - nothing to do."
